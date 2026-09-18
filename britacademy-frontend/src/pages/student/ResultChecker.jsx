@@ -91,7 +91,7 @@ const ResultChecker = () => {
                   required
                   value={formData.student_id}
                   className="w-full p-3 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a] text-sm transition-all"
-                  placeholder="e.g. BIA-2026-001"
+                  placeholder="e.g. S-000xxxxx"
                   onChange={handleInputChange}
                 />
               </div>

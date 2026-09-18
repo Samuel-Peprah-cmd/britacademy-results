@@ -447,7 +447,7 @@ const AdminDashboard = () => {
                   {editStudentId && <button onClick={() => { setEditStudentId(null); setNewStudent({ student_id: '', first_name: '', last_name: '', gender: '', class_id: '', photo: null }); }} className="text-xs text-red-500 hover:underline">Cancel</button>}
                 </div>
                 <form onSubmit={handleSaveStudent} className="space-y-3 text-sm">
-                  <input type="text" placeholder="Student ID (e.g. BIA-2026-001)" required className="w-full p-2.5 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a]" value={newStudent.student_id} onChange={e => setNewStudent({...newStudent, student_id: e.target.value})} />
+                  <input type="text" placeholder="Student ID (e.g. S-000xxxxx)" required className="w-full p-2.5 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a]" value={newStudent.student_id} onChange={e => setNewStudent({...newStudent, student_id: e.target.value})} />
                   <input type="text" placeholder="First Name" required className="w-full p-2.5 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a]" value={newStudent.first_name} onChange={e => setNewStudent({...newStudent, first_name: e.target.value})} />
                   <input type="text" placeholder="Last Name" required className="w-full p-2.5 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a]" value={newStudent.last_name} onChange={e => setNewStudent({...newStudent, last_name: e.target.value})} />
                   <select required className="w-full p-2.5 border border-slate-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a]" value={newStudent.gender} onChange={e => setNewStudent({...newStudent, gender: e.target.value})}>
@@ -656,7 +656,7 @@ const AdminDashboard = () => {
                    <h2 className="text-base font-semibold text-[#0f172a] flex items-center gap-2"><PlusCircle size={18}/> Create Exam Type</h2>
                  </div>
                  <form onSubmit={handleSaveExamType} className="flex gap-3">
-                    <input type="text" placeholder="e.g., WASSCE, Mock" value={newExamType} onChange={(e) => setNewExamType(e.target.value)} required className="flex-1 p-2.5 border border-slate-300 rounded-md outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a]" />
+                    <input type="text" placeholder="e.g., End-of-Year, Mid-Term" value={newExamType} onChange={(e) => setNewExamType(e.target.value)} required className="flex-1 p-2.5 border border-slate-300 rounded-md outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a]" />
                     <button type="submit" className="bg-[#0f172a] text-white px-6 py-2 rounded-md font-semibold hover:bg-slate-800 transition-colors">Add</button>
                  </form>
                  <div className="mt-6">
@@ -679,7 +679,7 @@ const AdminDashboard = () => {
                    <h2 className="text-base font-semibold text-[#0f172a] flex items-center gap-2"><PlusCircle size={18}/> Create Academic Year</h2>
                  </div>
                  <form onSubmit={handleSaveYear} className="flex gap-3">
-                    <input type="text" placeholder="e.g., 2026/2027" value={newYear} onChange={(e) => setNewYear(e.target.value)} required className="flex-1 p-2.5 border border-slate-300 rounded-md outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a]" />
+                    <input type="text" placeholder="e.g., September 2026" value={newYear} onChange={(e) => setNewYear(e.target.value)} required className="flex-1 p-2.5 border border-slate-300 rounded-md outline-none focus:ring-2 focus:ring-[#0f172a]/20 focus:border-[#0f172a]" />
                     <button type="submit" className="bg-[#0f172a] text-white px-6 py-2 rounded-md font-semibold hover:bg-slate-800 transition-colors">Add</button>
                  </form>
                  <div className="mt-6">
