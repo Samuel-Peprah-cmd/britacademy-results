@@ -40,7 +40,7 @@ const LandingPage = () => {
           {/* Welcome Text Section */}
           <div className="text-center md:text-left">
             <h2 className="font-display text-4xl md:text-[3.2rem] leading-[1.1] font-semibold text-[#0f172a]">
-              Official result management, done properly.
+              Official result Portal.
             </h2>
             <div className="w-16 h-[3px] bg-[#c2410c] mt-6 mb-6 mx-auto md:mx-0" />
             <p className="text-base md:text-lg text-slate-600 max-w-md mx-auto md:mx-0 leading-relaxed">
