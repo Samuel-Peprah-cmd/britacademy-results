@@ -99,9 +99,11 @@ const AdminDashboard = () => {
     if (!window.confirm(`Delete this? This cannot be undone.`)) return;
     try {
       let endpoint = `/admin/${type}s/${id}`;
+      if (type === 'class') endpoint = `/admin/classes/${id}`; // ADD THIS LINE
       if (type === 'assignment') endpoint = `/admin/tutors/assign/${id}`;
       if (type === 'setup/exam') endpoint = `/admin/setup/exams/${id}`;
       if (type === 'setup/year') endpoint = `/admin/setup/years/${id}`;
+      
       await api.delete(endpoint);
       triggerRefresh();
     } catch (err) {
