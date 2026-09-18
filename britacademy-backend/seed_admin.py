@@ -6,14 +6,14 @@ from werkzeug.security import generate_password_hash
 app = create_app()
 
 with app.app_context():
-    # Check if admin already exists
-    existing_admin = User.query.filter_by(email='admin@britacademy.online').first()
+    # Check if admin already exists using the new email
+    existing_admin = User.query.filter_by(email='martinkweku76@gmail.com').first()
     
     if existing_admin:
         print("Admin user already exists!")
     else:
         new_admin = User(
-            email='skapeprah@gmail.com',
+            email='martinkweku76@gmail.com',
             password_hash=generate_password_hash('Britacademy2026!'),
             first_name='Samuel',
             last_name='Peprah',
@@ -22,5 +22,5 @@ with app.app_context():
         db.session.add(new_admin)
         db.session.commit()
         print("✅ Super Admin created successfully!")
-        print("Email: skapeprah@gmail.com")
+        print("Email: martinkweku76@gmail.com")
         print("Password: Britacademy2026!")
